@@ -41,8 +41,8 @@ class Footer extends React.Component {
                         <div>
                             <ul>
                                 <a href="https://web.whatsapp.com/" class="ulre" target="_blank"><li class="wapp">Whatsapp</li></a>
-                                <a href="https://www.instagram.com/" class="ulre" target="_blank"><li class="inst">Instagram</li></a>
-                                <a href="https://www.facebook.com/" class="ulre" target="_blank"><li class="face">Facebook</li></a>
+                                <a href="https://instagram.com/patitaamigaa?igshid=YmMyMTA2M2Y=" class="ulre" target="_blank"><li class="inst">Instagram</li></a>
+                                <a href="https://www.facebook.com/profile.php?id=100090408035860&mibextid=ZbWKwL" class="ulre" target="_blank"><li class="face">Facebook</li></a>
                             </ul>
                         </div>
                     </div>

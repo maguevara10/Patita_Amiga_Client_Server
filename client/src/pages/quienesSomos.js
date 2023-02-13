@@ -128,9 +128,10 @@ function QuienesSomos() {
                         <img class="img-fluid w-100" src="imagenes/imagenJohan.jfif" />
                         <div class="overlay">
                             <p class="elTexto">
-                                Hola soy Johan Godoy, tengo 20 años, me gradué en el colegio Montufar, soy bueno para las matemáticas y me
-                                desenvuelvo bien al hablar en público, dentro del ámbito de la programación me llama la atención el manejo
-                                de datos y toda la información que se puede obtener estudiándolos
+                                Hola, soy Johan Godoy. Dentro de Patita Amiga, soy el encargado de brindar ayuda al usuario y supervisar
+                                los convenios que tenemos con organizaciones como PAE. 
+                                Además de eso, es mi trabajo administrar nuestra base de datos y garantizar
+                                el manejo adecuado de nuestra información.
                             </p>
                         </div>
                     </div>
@@ -145,9 +146,9 @@ function QuienesSomos() {
                         <img class="img-fluid w-100" src="imagenes/imagenDavid.jfif" />
                         <div class="overlay">
                             <p class="elTexto">
-                                Mi nombre es David Guarderas Leal. Tengo 21 años. Soy auxiliar en diseño gráfico y multimedia y aficionado a
-                                la ilustración y la animación. Siento gran interés por la computación gráfica y la generación de elementos
-                                gráficos por medio de la programación. Soy el encargado de la imagen corporativa de Patita Amiga.
+                                Mi nombre es David Guarderas Leal. Soy programador, desarrollador front-end y auxiliar en diseño gráfico y multimedia.
+                                Soy el encargado de la imagen corporativa de Patita Amiga. A su vez, soy el responsable de los Recursos
+                                Humanos de nuestra organización. 
                             </p>
                         </div>
                     </div>
@@ -162,9 +163,8 @@ function QuienesSomos() {
                         <img class="img-fluid w-100" src="imagenes/imagenMathias.jpg" />
                         <div class="overlay">
                             <p class="elTexto">
-                                Mi nombres es Mathias Guevara, tengo 19 años y completé mis estudios secundarios en la Unidad Educativa San Luis
-                                Gonzaga. Me gusta la lógica matemática y el proceso de desarrollo de software. Soy pésimo para el desarrollo de
-                                interfaces, a pesar de tener experiencia en ello.
+                                Mi nombre es Mathias Guevara. Soy el líder del grupo de desarrolladores de Patita Amiga. Apoyado por el 
+                                departamento de diseño, me desenvuelvo en el desarrollo de interfaces de nuestro sitio.
                             </p>
                         </div>
                     </div>
@@ -179,9 +179,9 @@ function QuienesSomos() {
                         <img class="img-fluid w-100" src="imagenes/imagenJhon.jfif" />
                         <div class="overlay">
                             <p class="elTexto">
-                                Soy Jhon Munarco Santos, tengo 28 años, estudié en el colegio municipal “nueve de octubre” de la ciudad de Quito.
-                                No me considero un buen programador, pero es lo que más me gusta hacer dentro del ámbito de esta carrera,
-                                me gusta ir lento pero seguro.
+                                Soy Jhon Munarco Santos. Soy programador back-end. Mi trabajo se centra en el diseño de la lógica 
+                                bajo la cual opera el sitio web de Patita Amiga. Además, soy el jefe de investigación, responsable de la mejora
+                                contínua de nuestra organización, así como del proceso que manejamos para la adopción de mascotas.
                             </p>
                         </div>
                     </div>
@@ -196,9 +196,9 @@ function QuienesSomos() {
                         <img class="img-fluid w-100" src="imagenes/imagenShared.jfif" />
                         <div class="overlay">
                             <p class="elTexto">
-                                Mi nombre es Shared Tinoco, tengo 20 años, graduada del colego Mariscal Antonio José de Sucre en Quito,
-                                soy buena en matemáticas, aprendiendo cosas nuevas y me desenvuelvo en el diseño de cualquier tipo ya
-                                que pongo mucha atención en los detalles.
+                                Mi nombre es Shared Tinoco. Soy la CEO de Patita Amiga. Además de mis funciones como programadora, administro
+                                el área financiera y legal de la empresa. Es mi trabajo, junto con el departamento de investigación, 
+                                asegurar la innovación constante y la implementación de nuevas tecnologías dentro de nuestro sitio.
                             </p>
                         </div>
                     </div>

@@ -169,7 +169,8 @@ footer p {
   bottom: 0;
   left: 0;
   opacity: 0;
-  background: rgba(253, 172, 83, 0.7);
+  /*background: rgba(253, 172, 83, 0.7);*/
+  background: rgba(54, 125, 93,0.7);
   border: 15px solid #ffffff;
   transition: .5s;
   z-index: 0;
