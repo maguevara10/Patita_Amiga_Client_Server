@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 
+import '../styles/estiloIniciarSesion.css'
+
 function IniciarSesion() {
     const [nombre, setNombre] = useState('');
     const [apellido, setApellido] = useState('');
@@ -28,14 +30,14 @@ function IniciarSesion() {
             <br />
             <br />
 
-            <section>
+            <section id="contenregis">
 
-                <table id="tablaFormulario" align="center">
+                <table id="tabregis" align="center">
                     <tr>
                         <td>
                             <form>
                                 <fieldset>
-                                    <legend><em>¿Quieres ser parte de nuestro equipo?</em></legend>
+                                    <legend id="titregis"><em>¿Quieres ser parte de nuestro equipo?</em></legend>
                                     <table >
                                         <tr>
                                             <td><label for="nombre">Nombre</label>

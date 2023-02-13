@@ -15,7 +15,6 @@ import './styles/estiloContactanos.css';
 import './styles/estiloTabla.css';
 import './styles/estiloMenu.css';
 import './styles/sobrenosotros.css';
-import './styles/estiloFormulario.css';
 import './styles/estiloCuenta.css';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -27,9 +26,9 @@ function App() {
   const nav = document.querySelector('.nav');
   const menu = document.querySelector('.menu');
 
-  // if(botonPopup){
-  //   menu.classList.remove('active');
-  // }
+  if(botonPopup){
+    menu.classList.remove('active');
+  }
 
   return (
     <div>
@@ -48,7 +47,6 @@ function App() {
                 <li><a href="contactanos">Contáctanos</a></li>
                 <li><a href="animales">Animales</a></li>
                 <li><a href="formulario">Formulario</a></li>
-                <li><a href="miCuenta">Mi Cuenta</a></li>
                 <li><a id="ini" onClick={() => setBotonPopup(true)}>Iniciar Sesión</a></li>
               </ul>
 

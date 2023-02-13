@@ -60,17 +60,9 @@
     width: 100%;
 }
 
-input[type="text"]::placeholder { 
-  font-size: 0.6em; 
-}
-input[type="number"]::placeholder { 
-  font-size: 0.6em; 
-}
-input[type="email"]::placeholder { 
-  font-size: 0.6em; 
-}
-input[type="name"]::placeholder { 
-  font-size: 0.6em; 
+escrib2::placeholder
+{
+  font-size:0.99em;
 }
 
 input[type= "date"]
@@ -78,9 +70,6 @@ input[type= "date"]
   font-size:0.99em;
 }
 
-input[type="tel"]::placeholder { 
-  font-size: 0.6em; 
-}
 .asunto2{
     border-radius: 8px;
     height: 90px;

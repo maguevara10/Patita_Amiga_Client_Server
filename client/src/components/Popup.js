@@ -12,22 +12,25 @@ function Popup(props) {
                 {props.children}
                 <div className='mainPopup'>
                     <div className='contenidoPopup grid'>
+                        <button class="cuentas" id="google">Iniciar sesión con Google</button><br/>
+                        <button class="cuentas" id="facebook">Iniciar sesión con Facebook</button><br/>
                         <h1>Iniciar Sesión</h1>
                         <div className='formulario'>
                             <label for="correo">Correo: </label>
-                            <input type="text" class="inputFormulario" id="nombre" name="nombre" onChange={(e) => {
+                            <input type="text" class="inputFormulario login" id="nombre" name="nombre" onChange={(e) => {
                                 setCorreo(e.target.value)
                             }} />
                             <label for="contraseña">Contraseña:</label>
-                            <input type="password" class="inputFormulario" id="contraseña" name="contraseña" onChange={(e) => {
+                            <input type="password" class="inputFormulario login" id="contraseña" name="contraseña" onChange={(e) => {
                                 setContrasenia(e.target.value)
                             }} />
+                            <br/>
+                            <button>Iniciar Sesión</button>
                         </div>
-                        <p>¿No tienes una cuenta? ¡Crea una <a href='IniciarSesion'>aquí</a>!</p>
+                        <p id="regis">¿No tienes una cuenta? ¡Crea una <a href='IniciarSesion'>aquí</a>!</p>
                     </div>
-                    <div className='imagen'>
-                        <img class="img-fluid w-100" src="imagenes/perrito2.png" />
-                    </div>
+                    
+                    
                 </div>
             </div>
 
