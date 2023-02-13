@@ -25,10 +25,10 @@ function App() {
   const nav = document.querySelector('.nav');
   const menu = document.querySelector('.menu');
 
-  if(botonPopup){
+  function cerrar(){
     menu.classList.remove('active');
   }
-
+  
   return (
     <div>
       <Router>
@@ -46,7 +46,7 @@ function App() {
                 <li><a href="contactanos">Contáctanos</a></li>
                 <li><a href="animales">Animales</a></li>
                 <li><a href="formulario">Formulario</a></li>
-                <li><a id="ini" onClick={() => setBotonPopup(true)}>Iniciar Sesión</a></li>
+                <li><a id="ini" onClick={() => {setBotonPopup(true); cerrar();}}>Iniciar Sesión</a></li>
               </ul>
 
               <div className="menu-btn" onClick={() => {
