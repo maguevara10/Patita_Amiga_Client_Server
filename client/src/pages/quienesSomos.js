@@ -179,9 +179,7 @@ function QuienesSomos() {
                         <img class="img-fluid w-100" src="imagenes/imagenJhon.jfif" />
                         <div class="overlay">
                             <p class="elTexto">
-                                Soy Jhon Munarco Santos, tengo 28 años, estudié en el colegio municipal “nueve de octubre” de la ciudad de Quito.
-                                No me considero un buen programador, pero es lo que más me gusta hacer dentro del ámbito de esta carrera,
-                                me gusta ir lento pero seguro.
+                                Soy Jhon Munarco Santos, 
                             </p>
                         </div>
                     </div>
