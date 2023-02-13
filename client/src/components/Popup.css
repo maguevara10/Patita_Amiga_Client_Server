@@ -38,10 +38,9 @@
 
 .imagen{
     width: 100%;
-    height:inherit;
 }
 .imagen img{
-    width:200%;
+    width:100%;
 }
 
 .close-btn{

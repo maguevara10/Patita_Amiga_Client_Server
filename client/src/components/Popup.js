@@ -36,7 +36,9 @@ function Popup(props) {
                         </div>
                         <p id="regis">¿No tienes una cuenta? ¡Crea una <a href='IniciarSesion'>aquí</a>!</p>
                     </div>
-                    
+                    <div class="imagen">
+                            <img src="imagenes/perrito2.png"></img>
+                    </div>
                     
                 </div>
             </div>
