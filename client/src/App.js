@@ -26,9 +26,9 @@ function App() {
   const nav = document.querySelector('.nav');
   const menu = document.querySelector('.menu');
 
-  if(botonPopup){
-    menu.classList.remove('active');
-  }
+  // if(botonPopup){
+  //   menu.classList.remove('active');
+  // }
 
   return (
     <div>
