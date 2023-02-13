@@ -23,16 +23,20 @@ import Menuar from './components/script';
 function App() {
   const [botonPopup, setBotonPopup] = useState('false');
   const nav = document.querySelector('.nav');
+  const menu = document.querySelector('.menu');
 
-  window.addEventListener('scroll',()=>{
-      nav.classList.toggle('active',window.scrollY>0)
-  })
+  if(botonPopup){
+    menu.classList.remove('active');
+  }
+
   return (
     <div>
       <Router>
         <div onLoad={() => setBotonPopup(false)}>
           <header>
-            <nav className="nav">
+            <nav className="nav" onScroll={() => {
+              nav.classList.toggle('active', window.scrollY > 0);
+            }}>
               <div className="logo">
                 <img src="imagenes/logo.png" alt="Logo Página" class="Pequenio" />
               </div>
@@ -41,9 +45,19 @@ function App() {
                 <li><a href="quienesSomos">Quiénes Somos</a></li>
                 <li><a href="contactanos">Contáctanos</a></li>
                 <li><a href="animales">Animales</a></li>
+<<<<<<< Updated upstream
                 <li><a href="formulario">Formulario</a></li>
                 <li><a onClick={() => setBotonPopup(true)}>Iniciar Sesión</a></li>
+=======
+                <li><a id="ini" onClick={() => setBotonPopup(true)}>Iniciar Sesión</a></li>
+>>>>>>> Stashed changes
               </ul>
+
+              <div className="menu-btn" onClick={() => {
+                menu.classList.toggle('active');
+              }}>
+                <i className="fas fa-bars"></i>
+              </div>
             </nav>
           </header>
         </div>
