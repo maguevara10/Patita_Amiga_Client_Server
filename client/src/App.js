@@ -14,7 +14,6 @@ import './styles/estiloContactanos.css';
 import './styles/estiloTabla.css';
 import './styles/estiloMenu.css';
 import './styles/sobrenosotros.css';
-import './styles/estiloFormulario.css';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
