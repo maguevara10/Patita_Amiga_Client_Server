@@ -137,6 +137,7 @@ function QuienesSomos() {
                     </div>
                     <div>
                         <h2 class="font-weight-bold">Johan Godoy</h2>
+                        <h2 class="font-weight-bold">Soporte Técnico</h2>
                     </div>
                 </div>
 
@@ -154,6 +155,7 @@ function QuienesSomos() {
                     </div>
                     <div>
                         <h2 class="font-weight-bold">David Guarderas</h2>
+                        <h2 class="font-weight-bold">Desarrollador Front-End</h2>
                     </div>
                 </div>
 
@@ -164,12 +166,13 @@ function QuienesSomos() {
                         <div class="overlay">
                             <p class="elTexto">
                                 Mi nombre es Mathias Guevara. Soy el líder del grupo de desarrolladores de Patita Amiga. Apoyado por el 
-                                departamento de diseño, me desenvuelvo en el desarrollo de interfaces de nuestro sitio.
+                                departamento de diseño, me desenvuelvo en el desarrollo back-end.
                             </p>
                         </div>
                     </div>
                     <div>
                         <h2 class="font-weight-bold">Mathias Guevara</h2>
+                        <h2 class="font-weight-bold">Líder del Equipo</h2>
                     </div>
                 </div>
 
@@ -187,6 +190,7 @@ function QuienesSomos() {
                     </div>
                     <div>
                         <h2 class="font-weight-bold">Jhon Munarco</h2>
+                        <h2 class="font-weight-bold">Desarrollador Back-End</h2>
                     </div>
                 </div>
 
@@ -204,6 +208,7 @@ function QuienesSomos() {
                     </div>
                     <div>
                         <h2 class="font-weight-bold">Shared Tinoco</h2>
+                        <h2 class="font-weight-bold">CEO de Patita Amiga</h2>
                     </div>
                 </div>
             </section>

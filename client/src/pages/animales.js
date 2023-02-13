@@ -4,10 +4,26 @@ function Animales() {
 
     return (
         <div class="infoPerros gridCentrado">
-            <div class="botones gridCentrado grid3Columnas">
-                <button class="boton">Animales</button>
-                <button class="boton">Tamaños</button>
-                <button class="boton">Sexo</button>
+            <div class="botones">
+                <h5>Animales:</h5>
+                <h5>Tamaños:</h5>
+                <h5>Sexos:</h5>
+                <select name="animales">
+                    <option value="Todos">Todos</option>
+                    <option value="Perros">Perros</option>
+                    <option value="Gatos">Gatos</option>
+                </select>
+                <select name="tamanios">
+                    <option value="Todos">Todos</option>
+                    <option value="Grandes">Grandes</option>
+                    <option value="Medianos">Medianos</option>
+                    <option value="Pequeños">Pequeños</option>
+                </select>
+                <select name="sexo">
+                    <option value="Todos">Todos</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
             </div>
 
             <div class="gridCentrado grid4Columnas">
