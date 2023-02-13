@@ -22,16 +22,20 @@ import Menuar from './components/script';
 function App() {
   const [botonPopup, setBotonPopup] = useState('false');
   const nav = document.querySelector('.nav');
+  const menu = document.querySelector('.menu');
 
-  window.addEventListener('scroll',()=>{
-      nav.classList.toggle('active',window.scrollY>0)
-  })
+  function cerrar(){
+    menu.classList.remove('active');
+  }
+  
   return (
     <div>
       <Router>
         <div onLoad={() => setBotonPopup(false)}>
           <header>
-            <nav className="nav">
+            <nav className="nav" onScroll={() => {
+              nav.classList.toggle('active', window.scrollY > 0);
+            }}>
               <div className="logo">
                 <img src="imagenes/logo.png" alt="Logo Página" class="Pequenio" />
               </div>
@@ -41,8 +45,14 @@ function App() {
                 <li><a href="contactanos">Contáctanos</a></li>
                 <li><a href="animales">Animales</a></li>
                 <li><a href="formulario">Formulario</a></li>
-                <li><a onClick={() => setBotonPopup(true)}>Iniciar Sesión</a></li>
+                <li><a id="ini" onClick={() => {setBotonPopup(true); cerrar();}}>Iniciar Sesión</a></li>
               </ul>
+
+              <div className="menu-btn" onClick={() => {
+                menu.classList.toggle('active');
+              }}>
+                <i className="fas fa-bars"></i>
+              </div>
             </nav>
           </header>
         </div>

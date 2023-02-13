@@ -500,3 +500,24 @@ footer p {
     width: 100%;
   }
 }
+.botones{
+  background: rgba(53,124,92,0.8);
+  display: grid;
+  place-content: center;
+  column-gap: 40px;
+  row-gap: 10px;
+  padding: 10px;
+  text-align: center;
+  grid-template-columns: repeat(3,1fr);
+  border-radius: 8px;
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.botones select{
+  color: white;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background: rgba(14, 40, 29, 0.8);
+  border-radius: 8px;
+}

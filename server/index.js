@@ -16,13 +16,13 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/api/get', (req,res)=>{
-    const sqlSelect = "SELECT * FROM usuario;";
-    db.query(sqlSelect, (error, results) => {
+    const sqlSelect = "SELECT ani_Id,ani_Especie, ani_Nombre, ani_Raza, ani_Tamanio, ani_Edad, ani_Sexo, ani_Fecha_ingreso, ani_Descripcion, ani_Foto FROM animal;";
+    db.query(sqlSelect, (error, result) => {
         if (error)
             throw error;
 
-        console.log(results);
-        res.send(results);
+        console.log(result);
+        res.send(result);
     });
 });
 
