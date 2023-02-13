@@ -79,6 +79,17 @@ app.post('/api/insert', (req, res) => {
     })
 });
 
+app.get('/api/get/usu', (req,res)=>{
+    const sqlSelect = "SELECT usu_Correo, usu_Contraseña FROM usuario;";
+    db.query(sqlSelect, (error, result) => {
+        if (error)
+            throw error;
+
+        console.log(result);
+        res.send(result);
+    });
+});
+
 app.listen(3001, () => {
     console.log("Corriendo en el puerto 3001");
 });

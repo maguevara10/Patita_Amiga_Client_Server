@@ -2,6 +2,7 @@ import React from 'react';
 import "./Popup.css";
 import { useState, useEffect } from 'react';
 
+
 function Popup(props) {
     const [correo, setCorreo] = useState('');
     const [contrasenia, setContrasenia] = useState('');
