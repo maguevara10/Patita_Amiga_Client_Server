@@ -3,6 +3,7 @@ import PaginaPrincipal from "./pages/paginaPrincipal";
 import Contactanos from "./pages/contactanos";
 import QuienesSomos from "./pages/quienesSomos";
 import Animales from "./pages/animales";
+import Formulario from "./pages/formulario";
 
 import Footer from "./components/Footer";
 import Popup from "./components/Popup";
@@ -13,6 +14,7 @@ import './styles/estiloContactanos.css';
 import './styles/estiloTabla.css';
 import './styles/estiloMenu.css';
 import './styles/sobrenosotros.css';
+import './styles/estiloFormulario.css';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
@@ -39,6 +41,7 @@ function App() {
                 <li><a href="quienesSomos">Quiénes Somos</a></li>
                 <li><a href="contactanos">Contáctanos</a></li>
                 <li><a href="animales">Animales</a></li>
+                <li><a href="formulario">Formulario</a></li>
                 <li><a onClick={() => setBotonPopup(true)}>Iniciar Sesión</a></li>
               </ul>
             </nav>
@@ -50,6 +53,7 @@ function App() {
           <Route path="/IniciarSesion" element={<IniciarSesion />} />
           <Route path="/QuienesSomos" element={<QuienesSomos />} />
           <Route path="/Animales" element={<Animales />} />
+          <Route path="/Formulario" element={<Formulario/>}/>
         </Routes>
         <Footer />
         <Popup trigger={botonPopup} setTrigger={setBotonPopup} />
