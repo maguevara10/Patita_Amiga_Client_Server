@@ -45,12 +45,8 @@ function App() {
                 <li><a href="quienesSomos">Quiénes Somos</a></li>
                 <li><a href="contactanos">Contáctanos</a></li>
                 <li><a href="animales">Animales</a></li>
-<<<<<<< Updated upstream
                 <li><a href="formulario">Formulario</a></li>
-                <li><a onClick={() => setBotonPopup(true)}>Iniciar Sesión</a></li>
-=======
                 <li><a id="ini" onClick={() => setBotonPopup(true)}>Iniciar Sesión</a></li>
->>>>>>> Stashed changes
               </ul>
 
               <div className="menu-btn" onClick={() => {
