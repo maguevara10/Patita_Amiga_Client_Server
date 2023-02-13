@@ -32,9 +32,9 @@ CREATE TABLE `animal` (
   `ani_Sexo` char(1) NOT NULL,
   `ani_Fecha_Ingreso` date NOT NULL,
   `ani_Fecha_Adopcion` date DEFAULT NULL,
-  `ani_Descripcion` varchar(60) NOT NULL,
-  `ani_Foto` longblob NOT NULL,
-  `ani_Registro_Medico` longblob NOT NULL,
+  `ani_Descripcion` varchar(900) NOT NULL,
+  `ani_Foto` varchar(24) NOT NULL,
+  `ani_Registro_Medico` longblob,
   PRIMARY KEY (`ani_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -45,6 +45,7 @@ CREATE TABLE `animal` (
 
 LOCK TABLES `animal` WRITE;
 /*!40000 ALTER TABLE `animal` DISABLE KEYS */;
+INSERT INTO `animal` VALUES ('ani0001','Gato','Lila','Bengalí',30,12,'F','2023-01-31',NULL,'Fui encontrada en las puertas del PAE sin collar y con muchas pulgas. Fui bañada y esterilizada. Soy muy juguetona y estoy esperando a una familia que me dé mucho amor.','imagenes/ani0001.jpeg',NULL),('ani0002','Perro','Gorila','Bergamasco',65,18,'M','2023-02-01',NULL,'Me rescataron cuando mi pata se quedó atorada en unas espinas. Mi pelo estaba muy largo y estaba muy flaco. Todavía necesito una dieta especial, pero soy muy cariñoso y alegre.','imagenes/ani0002.jpg',NULL),('ani0003','Gato','Cocorito','Birmano',10,8,'M','2023-01-30',NULL,'Mi dueña me dejó aquí porque ya no podía mantenerme. Necesito un cálido hogar en donde pueda andar libremente. Soy algo inquieto y aventurero, pero siempre agradezco cariñosamente cuando me ofrecen un plato de comida. ','imagenes/ani0003.jpeg',NULL),('ani0004','Perro','Yayita','Carniche',20,24,'F','2023-02-04',NULL,'Me encontraron muy enferma perdida en el monte. Me salvé y ahora estoy lista para ser la mejor amiga de cualquier niño o niña que quiera rascarme las orejas. Soy muy tranquila, por lo que nunca haré destrozos.','imagenes/ani0004.jpg',NULL),('ani0005','Gato','Lulita','Bobtail Japonés',15,12,'F','2023-01-30',NULL,'Soy parte de la camada de una gata que dio a luz en el refugio hace tiempo. Desde entonces, he crecido fuerte, sana y muy juguetona. Me encantan las croquetas de pescado.','imagenes/ani0005.jpg',NULL),('ani0006','Perro','Snoopy','Shnauzer',25,39,'M','2023-01-10',NULL,'Los trabajadores del refugio me rescataron a un lado de la carretera. Tenía las patitas rotas y estaba deshidratado. Con el tiempo, he conseguido volver a caminar. Tenme un poco de paciencia. Todavía soy algo lento. ','imagenes/ani0006.jpg',NULL),('ani0007','Gato','Darkfield','Bombay',30,24,'M','2023-02-10',NULL,'Un día llegué por casualidad al refugio, pero era tan obeso que caí y me fracturé la pata. Estaba intoxicado, porque antes comía basura. En PAE me sanaron y me dieron una dieta especial y ejercicio para adelgazar. Soy algo perezoso, así que no me verás corriendo por tu casa muy a menudo, pero em encantará acurrucarme contigo.','imagenes/ani0007.jpg',NULL);
 /*!40000 ALTER TABLE `animal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -118,4 +119,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-02-12 19:22:09
+-- Dump completed on 2023-02-13  4:03:00
