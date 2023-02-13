@@ -4,7 +4,6 @@ import Contactanos from "./pages/contactanos";
 import QuienesSomos from "./pages/quienesSomos";
 import Animales from "./pages/animales";
 import Formulario from "./pages/formulario";
-import MiCuenta from "./pages/miCuenta";
 
 import Footer from "./components/Footer";
 import Popup from "./components/Popup";
@@ -15,7 +14,6 @@ import './styles/estiloContactanos.css';
 import './styles/estiloTabla.css';
 import './styles/estiloMenu.css';
 import './styles/sobrenosotros.css';
-import './styles/estiloCuenta.css';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
@@ -26,10 +24,10 @@ function App() {
   const nav = document.querySelector('.nav');
   const menu = document.querySelector('.menu');
 
-  // if(botonPopup){
-  //   menu.classList.remove('active');
-  // }
-
+  function cerrar(){
+    menu.classList.remove('active');
+  }
+  
   return (
     <div>
       <Router>
@@ -47,7 +45,7 @@ function App() {
                 <li><a href="contactanos">Contáctanos</a></li>
                 <li><a href="animales">Animales</a></li>
                 <li><a href="formulario">Formulario</a></li>
-                <li><a id="ini" onClick={() => setBotonPopup(true)}>Iniciar Sesión</a></li>
+                <li><a id="ini" onClick={() => {setBotonPopup(true); cerrar();}}>Iniciar Sesión</a></li>
               </ul>
 
               <div className="menu-btn" onClick={() => {
@@ -65,7 +63,6 @@ function App() {
           <Route path="/QuienesSomos" element={<QuienesSomos />} />
           <Route path="/Animales" element={<Animales />} />
           <Route path="/Formulario" element={<Formulario/>}/>
-          <Route path="/MiCuenta" element={<MiCuenta/>}/>
         </Routes>
         <Footer />
         <Popup trigger={botonPopup} setTrigger={setBotonPopup} />

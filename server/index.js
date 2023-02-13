@@ -15,6 +15,16 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/api/get1', (req,res)=>{
+    const sqlSelect = "SELECT ani_Id,ani_Especie, ani_Nombre, ani_Raza, ani_Tamanio, ani_Edad, ani_Sexo, ani_Fecha_ingreso, ani_Descripcion, ani_Foto FROM animal limit 6;";
+    db.query(sqlSelect, (error, result) => {
+        if (error)
+            throw error;
+
+        console.log(result);
+        res.send(result);
+    });
+});
 app.get('/api/get', (req,res)=>{
     const sqlSelect = "SELECT ani_Id,ani_Especie, ani_Nombre, ani_Raza, ani_Tamanio, ani_Edad, ani_Sexo, ani_Fecha_ingreso, ani_Descripcion, ani_Foto FROM animal;";
     db.query(sqlSelect, (error, result) => {

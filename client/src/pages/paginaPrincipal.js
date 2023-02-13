@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import Axios from 'axios'
 
 function PaginaPrincipal() {
+    const [animalList, setAnimalList] = useState([]);
+
+    useEffect(() => {
+        Axios.get('http://localhost:3001/api/get1').then((response) => {
+            setAnimalList(response.data);   
+        })
+    }, []);
     return (<div class="mainBody" onLoad={window['alcargar']}>
         <div id="slider">
             <div class="slide">
@@ -34,93 +42,23 @@ function PaginaPrincipal() {
         <br />
         <br />
         <div class="contenedor">
-            <section id="mainInfo">
-                {/* <!-- Perro 1 --> */}
-                <div class="bigbox borderbox" id="perro1">
-                    <div class="relativo">
-                        <img class="img-fluid w-100" src="imagenes/perrito1.png" />
-                        <div class="overlay">
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil nam vel repellat harum sapiente consectetur maiores, veniam non, facilis est beatae dicta accusantium similique odio ducimus quaerat, quia soluta amet?
-                            </p>
+            <div id="mainInfo">
+            {animalList.map((val) => {
+                    return <div className="smallbox borderbox animal" id={val.ani_Id}>
+                        <div className="relativo">
+                            <img className="img-fluid w-100" src={val.ani_Foto} />
+                            <div className="overlay">
+                                <p>
+                                    {val.ani_Descripcion}
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 className="font-weight-bold">{val.ani_Nombre}</h2>
                         </div>
                     </div>
-                    <div>
-                        <h2 class="font-weight-bold">Panchito</h2>
-                    </div>
-                </div>
-                {/* <!-- Perro 2 -->  */}
-                <div class="bigbox borderbox" id="perro2">
-                    <div class="relativo">
-                        <img class="img-fluid w-100" src="imagenes/perrito2.png" />
-                        <div class="overlay">
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil nam vel repellat harum sapiente consectetur maiores, veniam non, facilis est beatae dicta accusantium similique odio ducimus quaerat, quia soluta amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <h2 class="font-weight-bold">Firulais</h2>
-                    </div>
-                </div>
-                {/* <!-- Perro 3 -->  */}
-                <div class="bigbox borderbox" id="perro3">
-                    <div class="relativo">
-                        <img class="img-fluid w-100" src="imagenes/perrito3.png" />
-                        <div class="overlay">
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil nam vel repellat harum sapiente consectetur maiores, veniam non, facilis est beatae dicta accusantium similique odio ducimus quaerat, quia soluta amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <h2 class="font-weight-bold">Bethoven</h2>
-                    </div>
-                </div>
-                {/* <!-- Perro 4 -->  */}
-                <div class="bigbox borderbox" id="perro4">
-                    <div class="relativo">
-                        <img class="img-fluid w-100" src="imagenes/perrito5.png" />
-                        <div class="overlay">
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil nam vel repellat harum sapiente consectetur maiores, veniam non, facilis est beatae dicta accusantium similique odio ducimus quaerat, quia soluta amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <h2 class="font-weight-bold">Franks</h2>
-                    </div>
-                </div>
-                {/* <!-- Perro 5 -->  */}
-                <div class="bigbox borderbox" id="perro5">
-                    <div class="relativo">
-                        <img class="img-fluid w-100" src="imagenes/perrito4.png" />
-                        <div class="overlay">
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil nam vel repellat harum sapiente consectetur maiores, veniam non, facilis est beatae dicta accusantium similique odio ducimus quaerat, quia soluta amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <h2 class="font-weight-bold">Maya</h2>
-                    </div>
-                </div>
-                {/* <!-- Perro 6 -->  */}
-                <div class="bigbox borderbox" id="perro6">
-                    <div class="relativo">
-                        <img class="img-fluid w-100" src="imagenes/perroGrande.jpg" />
-                        <div class="overlay">
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil nam vel repellat harum sapiente consectetur maiores, veniam non, facilis est beatae dicta accusantium similique odio ducimus quaerat, quia soluta amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <h2 class="font-weight-bold">Perrin</h2>
-                    </div>
-                </div>
-            </section>
-
+                })}
+            </div>
         </div>
         <br />
         <br />
