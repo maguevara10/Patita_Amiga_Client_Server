@@ -130,10 +130,15 @@ footer p {
 
 #mainInfo {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  column-gap: 40px;
-  row-gap: 10px;
+  place-content: center;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 2vw;
+  row-gap: 2vh;
+
+}
+#mainInfo .smallbox{
+  max-width: 25vw;
+  
 }
 
 .borderbox {
