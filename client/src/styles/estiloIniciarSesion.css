@@ -1,0 +1,22 @@
+
+#tabregis{
+    display: grid;
+    justify-content: center;
+    margin:0 auto;
+    text-align: center;
+}
+
+#titregis{
+    color:rgb(54, 125, 93);
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+#tabregis label{
+    font-size: 0.9em;
+}
+#tabregis input{
+    width:70%;
+    margin:2%;
+}

@@ -1,7 +1,6 @@
 *
 {
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-    color:white;
 }
 
 @font-face {
@@ -10,6 +9,7 @@
 }
 
 .popup{
+    color:white;
     position: fixed;
     top: 0;
     left: 0;
