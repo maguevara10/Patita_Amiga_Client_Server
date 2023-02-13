@@ -10,6 +10,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+  z-index: 0;
 }
 
 footer {
@@ -25,6 +26,7 @@ footer {
 img {
   vertical-align: middle;
   border-style: none;
+  
 }
 
 .img-fluid {
@@ -170,6 +172,7 @@ footer p {
   background: rgba(253, 172, 83, 0.7);
   border: 15px solid #ffffff;
   transition: .5s;
+  z-index: 0;
   position: absolute !important;
   display: flex !important;
   align-items: center !important;

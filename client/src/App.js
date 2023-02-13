@@ -20,6 +20,11 @@ import Menuar from './components/script';
 
 function App() {
   const [botonPopup, setBotonPopup] = useState('false');
+  const nav = document.querySelector('.nav');
+
+  window.addEventListener('scroll',()=>{
+      nav.classList.toggle('active',window.scrollY>0)
+  })
   return (
     <div>
       <Router>
