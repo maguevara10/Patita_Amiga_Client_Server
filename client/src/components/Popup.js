@@ -5,6 +5,11 @@ import { useState, useEffect } from 'react';
 function Popup(props) {
     const [correo, setCorreo] = useState('');
     const [contrasenia, setContrasenia] = useState('');
+
+    const handleSubmit = (event) => {
+        event.prevenrDefault() 
+        console.log('This is Submit') 
+    }
     return (props.trigger) ? (
         <div className='popup'>
             <div className='inner-popup'>
@@ -12,9 +17,10 @@ function Popup(props) {
                 {props.children}
                 <div className='mainPopup'>
                     <div className='contenidoPopup grid'>
+                    <h1>Iniciar Sesión</h1>
                         <button class="cuentas" id="google">Iniciar sesión con Google</button><br/>
                         <button class="cuentas" id="facebook">Iniciar sesión con Facebook</button><br/>
-                        <h1>Iniciar Sesión</h1>
+                        
                         <div className='formulario'>
                             <label for="correo">Correo: </label>
                             <input type="text" class="inputFormulario login" id="nombre" name="nombre" onChange={(e) => {
