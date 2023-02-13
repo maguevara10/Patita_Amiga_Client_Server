@@ -48,7 +48,7 @@ function PaginaPrincipal() {
                         <div className="relativo">
                             <img className="img-fluid w-100" src={val.ani_Foto} />
                             <div className="overlay">
-                                <p>
+                                <p className="elTexto">
                                     {val.ani_Descripcion}
                                 </p>
                             </div>
