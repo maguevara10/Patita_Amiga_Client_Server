@@ -1,14 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import Popup from "./js/PopupAnimal";
 
 function Animales() {
     const [animalList, setAnimalList] = useState([]);
+    const [id, setId] = useState('');
+    const [botonPopup, setBotonPopup] = useState('false');
+    const nav = document.querySelector('.nav');
+    const menu = document.querySelector('.menu');
 
+    function cerrar() {
+        menu.classList.remove('active');
+    }
+    
     useEffect(() => {
         Axios.get('http://localhost:3001/api/get').then((response) => {
             setAnimalList(response.data);
         })
     }, []);
+ 
 
     function setClasses() {
         var animals = document.getElementsByClassName("animal");
@@ -28,19 +38,19 @@ function Animales() {
             }
         } else if (razaAnimal == "Perros") {
             for (let index = 0; index < animals.length; index++) {
-                if (animals[index].classList[3] == "Perro"){
+                if (animals[index].classList[3] == "Perro") {
                     animals[index].classList.remove('activo1');
-                }else{
+                } else {
                     animals[index].classList.add('activo1');
-                }  
+                }
             }
         } else {
             for (let index = 0; index < animals.length; index++) {
-                if (animals[index].classList[3] == "Gato"){
+                if (animals[index].classList[3] == "Gato") {
                     animals[index].classList.remove('activo1');
-                }else{
+                } else {
                     animals[index].classList.add('activo1');
-                }  
+                }
             }
         }
     }
@@ -54,27 +64,27 @@ function Animales() {
             }
         } else if (razaAnimal == "Grandes") {
             for (let index = 0; index < animals.length; index++) {
-                if (animals[index].classList[4] >= 100){
+                if (animals[index].classList[4] >= 100) {
                     animals[index].classList.remove('activo2');
-                }else{
+                } else {
                     animals[index].classList.add('activo2');
-                }  
+                }
             }
-        } else if(razaAnimal == "Medianos"){
+        } else if (razaAnimal == "Medianos") {
             for (let index = 0; index < animals.length; index++) {
-                if (animals[index].classList[4] < 100 && animals[index].classList[4] >= 50){
+                if (animals[index].classList[4] < 100 && animals[index].classList[4] >= 50) {
                     animals[index].classList.remove('activo2');
-                }else{
+                } else {
                     animals[index].classList.add('activo2');
-                }  
+                }
             }
-        }else {
+        } else {
             for (let index = 0; index < animals.length; index++) {
-                if (animals[index].classList[4] < 50){
+                if (animals[index].classList[4] < 50) {
                     animals[index].classList.remove('activo2');
-                }else{
+                } else {
                     animals[index].classList.add('activo2');
-                }  
+                }
             }
         }
     }
@@ -88,19 +98,19 @@ function Animales() {
             }
         } else if (razaAnimal == "M") {
             for (let index = 0; index < animals.length; index++) {
-                if (animals[index].classList[5] == "M"){
+                if (animals[index].classList[5] == "M") {
                     animals[index].classList.remove('activo3');
-                }else{
+                } else {
                     animals[index].classList.add('activo3');
-                }  
+                }
             }
         } else {
             for (let index = 0; index < animals.length; index++) {
-                if (animals[index].classList[5] == "F"){
+                if (animals[index].classList[5] == "F") {
                     animals[index].classList.remove('activo3');
-                }else{
+                } else {
                     animals[index].classList.add('activo3');
-                }  
+                }
             }
         }
     }
@@ -128,7 +138,7 @@ function Animales() {
                 </select>
             </div>
 
-            <div className="gridCentrado grid4Columnas">
+            <div className="gridCentrado grid4Columnas" onLoad={() => setBotonPopup(false)}>
                 {animalList.map((val) => {
                     return <div className="smallbox borderbox animal" id={val.ani_Id}>
                         <div className="relativo">
@@ -141,6 +151,7 @@ function Animales() {
                         </div>
                         <div>
                             <h2 className="font-weight-bold">{val.ani_Nombre}</h2>
+                            <button className='info-btn' onClick={() => { setBotonPopup(true); cerrar();}} >Información</button>
                         </div>
                     </div>
                 })}

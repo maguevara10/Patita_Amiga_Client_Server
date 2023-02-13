@@ -527,3 +527,15 @@ footer p {
   background: rgba(14, 40, 29, 0.8);
   border-radius: 8px;
 }
+.info-btn{
+  padding: 5px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background: rgba(53,124,92,0.8);
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+}
+.info-btn:hover{
+  background: rgba(85, 159, 126, 0.8);
+}
