@@ -154,7 +154,11 @@ footer p {
   height: 50vh;
   background: rgba(255, 255, 255, 0.8);
 }
-
+.smallbox.activo1,
+.smallbox.activo2,
+.smallbox.activo3{
+  display: none;
+}
 .bigbox img {
   width: 15vw;
   height: 50vh;
