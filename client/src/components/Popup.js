@@ -1,15 +1,53 @@
 import React from 'react';
 import "./Popup.css";
 import { useState, useEffect } from 'react';
+import Axios from 'axios';
 
 
 function Popup(props) {
     const [correo, setCorreo] = useState('');
     const [contrasenia, setContrasenia] = useState('');
+    const [lista,setLista] = useState([]);
 
     const handleSubmit = (event) => {
         event.prevenrDefault()
         console.log('This is Submit')
+    }
+
+    useEffect(()=>{
+        Axios.get("http://localhost:3001/api/get2",{
+            correo: correo,
+            contrasenia: contrasenia
+        }).then(function (response){
+            setLista(response.data)
+        })
+    })
+    const validar = () => {
+        console.log(lista);
+        var encontrado = false;
+        var i =0;
+        for (let index = 0; index < lista.length; index++) {
+            if(lista[index].usu_Correo == correo && lista[index].usu_Contrasenia == contrasenia)
+            {
+                encontrado = true;
+                i=index;
+                break;
+            }
+        }
+        if(encontrado){
+            alert("Bienvenido "+lista[i].usu_Nombre);
+            var iniciarSesionbutton = document.getElementById("ini");
+            console.log(iniciarSesionbutton);
+            var usuariobutton = document.getElementsByClassName("inactivo");
+            console.log(usuariobutton);
+            iniciarSesionbutton.classList.add("inactivo");
+            iniciarSesionbutton.classList.remove("reemplazable");
+
+            usuariobutton[0].classList.remove("inactivo");
+            usuariobutton[0].classList.add("reemplazable");
+        }else{
+            alert("Correo o Contraseña incorrecta")
+        }
     }
     return (props.trigger) ? (
         <div className='popup'>
@@ -32,20 +70,13 @@ function Popup(props) {
                                 setContrasenia(e.target.value)
                             }} />
                             <br />
-                            <button>Iniciar Sesión</button>
+                            <button onClick={validar}>Iniciar Sesión</button>
                         </div>
                         <p id="regis">¿No tienes una cuenta? ¡Crea una <a href='IniciarSesion'>aquí</a>!</p>
                     </div>
-<<<<<<< Updated upstream
-                    <div class="imagen">
-                            <img src="imagenes/perrito2.png"></img>
-                    </div>
-                    
-=======
                     <div>
                         <img className='imagen' src='imagenes/perrito2.png'/>
                     </div>
->>>>>>> Stashed changes
                 </div>
             </div>
         </div>

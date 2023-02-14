@@ -36,6 +36,18 @@ app.get('/api/get1', (req, res) => {
         res.send(result);
     });
 });
+app.get('/api/get2', (req, res)=>{
+    const correo = req.params.Correo;
+    const contrasenia = req.params.Contrasenia;
+    const sqlSelectUsu = 'SELECT * FROM usuario';
+    db.query(sqlSelectUsu,[correo, contrasenia], (err,result)=>{
+        if (err)
+            throw err;
+
+        res.send(result);
+        console.log(result)
+    })
+});
 app.post('/api/insert', (req, res) => {
 
     const nombre = req.body.nombre;

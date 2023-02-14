@@ -45,7 +45,8 @@ function App() {
                 <li><a href="contactanos">Contáctanos</a></li>
                 <li><a href="animales">Animales</a></li>
                 <li><a href="formulario">Formulario</a></li>
-                <li><a id="ini" onClick={() => {setBotonPopup(true); cerrar();}}>Iniciar Sesión</a></li>
+                <li><a id="ini" className="reemplazable" onClick={() => {setBotonPopup(true); cerrar();}}>Iniciar Sesión</a></li>
+                <li><a className="inactivo" href="formulario">Usuario</a></li>
               </ul>
 
               <div className="menu-btn" onClick={() => {
