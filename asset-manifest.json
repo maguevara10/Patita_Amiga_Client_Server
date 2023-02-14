@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Patita_Amiga_Client_Server/static/css/main.5a3a0e8b.css",
+    "main.js": "/Patita_Amiga_Client_Server/static/js/main.ba25667e.js",
+    "static/media/Fondo3.jpg": "/Patita_Amiga_Client_Server/static/media/Fondo3.e27c0fc64d3d488671ae.jpg",
+    "static/media/Fresh Lychee.ttf": "/Patita_Amiga_Client_Server/static/media/Fresh Lychee.43aebddad6a9b5cd16b1.ttf",
+    "index.html": "/Patita_Amiga_Client_Server/index.html",
+    "main.5a3a0e8b.css.map": "/Patita_Amiga_Client_Server/static/css/main.5a3a0e8b.css.map",
+    "main.ba25667e.js.map": "/Patita_Amiga_Client_Server/static/js/main.ba25667e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a3a0e8b.css",
+    "static/js/main.ba25667e.js"
+  ]
+}
