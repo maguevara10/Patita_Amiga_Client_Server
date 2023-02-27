@@ -1,24 +1,6 @@
 import React from 'react';
-import emailjs from '@emailjs/browser';
-
 
 function Contactanos() {
-
-    let form = document.getElementById("form");
-
-    const enviarEmail = (event) =>{
-        event.preventDefault();
-        emailjs.sendForm('service_c1ykv4a','template_88c3mde',event.target,'EU2y4JZOmGaRFzaUE')
-        .then(response => {
-            form.reset();
-            console.log(response);
-            alert("Correo enviado con éxito.");
-            
-        })
-        .catch(error => console.log(error));
-
-    }
-
     return (
         <div>
             <div class="pres">
@@ -60,24 +42,24 @@ function Contactanos() {
                     <section id="secc">
                         <fieldset id="cuentanos">
                             <legend><h1>Cuéntanos tus dudas</h1></legend>
-                            <form onSubmit={enviarEmail} id="form" >
+                            <form>
                                 <table>
                                     <tr>
                                         <td>
-                                            <input type="name" class="escrib" placeholder="Nombre" name="Nombre"/>
+                                            <input type="name" class="escrib" placeholder="Nombre" />
                                         </td>
                                         <td>
-                                            <input type="email" class="escrib" placeholder="Correo" name="Email"/>
+                                            <input type="email" class="escrib" placeholder="Correo" />
                                         </td>
                                     </tr>
                                     <tr>
                                         <td colspan="2">
-                                            <input type="text" class="asunto" placeholder="Asunto" name="Asunto"/>
+                                            <input type="text" class="asunto" placeholder="Asunto" />
                                         </td>
                                     </tr>
                                     <tr>
                                         <td colspan="2">
-                                            <textarea className="mensaje" placeholder="Escribe tu mensaje..." name = "Mensaje"/>
+                                            <input type="text" class="mensaje" placeholder="Escribe tu mensaje..." />
                                         </td>
                                     </tr>
                                 </table>
